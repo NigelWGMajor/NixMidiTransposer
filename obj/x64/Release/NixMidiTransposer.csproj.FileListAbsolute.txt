@@ -1,0 +1,16 @@
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\MidiTransposer.net.dll
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\MidiTransposer.net.pdb
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Samples.MidiNoteMapper.XML
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Core.dll
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Framework.dll
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Interop.dll
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Core.pdb
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Core.xml
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Framework.pdb
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Framework.xml
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\bin\x64\Release\Jacobi.Vst.Interop.xml
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\obj\x64\Release\NixMidiTransposer.MidiNoteMapperUI.resources
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\obj\x64\Release\NixMidiTransposer.csproj.GenerateResource.Cache
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\obj\x64\Release\NixMidiTransposer.csproj.CoreCompileInputs.cache
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\obj\x64\Release\MidiTransposer.net.dll
+N:\NixBox\Dropbox\Nix\Dev\Code\AV\VstNew\MidiNoteMapper\Active\obj\x64\Release\MidiTransposer.net.pdb

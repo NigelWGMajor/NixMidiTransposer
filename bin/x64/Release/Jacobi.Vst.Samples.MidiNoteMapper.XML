@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MidiTransposer.net</name>
+    </assembly>
+    <members>
+        <member name="T:NixMidiTransposer.AudioProcessor">
+            <summary>
+            A dummy audio processor only used for the timing of midi processing.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.AudioProcessor.#ctor(NixMidiTransposer.Plugin)">
+            <summary>
+            Constructs a new instance.
+            </summary>
+            <param name="plugin">Must not be null.</param>
+        </member>
+        <member name="M:NixMidiTransposer.AudioProcessor.Process(Jacobi.Vst.Core.VstAudioBuffer[],Jacobi.Vst.Core.VstAudioBuffer[])">
+            <inheritdoc />
+            <remarks>This method is used to push midi events to the host.</remarks>
+        </member>
+        <member name="T:NixMidiTransposer.ViewModel">
+            <summary>
+            The supporting model.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.ViewModel.Semitones">
+            <summary>
+            The offset, in semitones
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.ViewModel.InitializeParameters">
+            <summary>
+            Sets up a parameter that can be learned or mapped to.
+            </summary>
+        </member>
+        <member name="T:NixMidiTransposer.MidiNoteMapperUI">
+            <summary>
+            The plugin custom editor UI.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.#ctor">
+            <summary>
+            Constructs a new instance.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.MidiNoteMapperUI.Transpose">
+            <summary>
+            Nick added: number of semitones to transpose.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.MidiNoteMapperUI.NoteOnEvents">
+            <summary>
+            Contains a queue with note-on note numbers currently playing.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.ProcessIdle">
+            <summary>
+            This is the idle-processing loop.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.RefreshSliders">
+            <summary>
+            Refreshes the slider positions based on the semitones setting
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.Recalculate">
+            <summary>
+            Recalculate the offset base on the slider positions
+            </summary>
+        </member>
+        <member name="F:NixMidiTransposer.MidiNoteMapperUI.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NixMidiTransposer.MidiNoteMapperUI.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NixMidiTransposer.MidiProcessor">
+            <summary>
+            Implements the incoming Midi event handling for the plugin.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.MidiProcessor.#ctor(NixMidiTransposer.Plugin)">
+            <summary>
+            Constructs a new instance.
+            </summary>
+            <param name="plugin">Must not be null.</param>
+        </member>
+        <member name="P:NixMidiTransposer.MidiProcessor.Events">
+            <summary>
+            Gets the midi events that should be processed in the current cycle.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.MidiProcessor.MidiThru">
+            <summary>
+            Gets or sets a value indicating wether non-handled midi events should be passed to the output.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.MidiProcessor.NoteOnEvents">
+            <summary>
+            The raw note on note numbers.
+            </summary>
+        </member>
+        <member name="T:NixMidiTransposer.Plugin">
+            <summary>
+            The Plugin root class that implements the interface manager and the plugin midi source.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.#ctor">
+            <summary>
+            Constructs a new instance.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.Plugin.AudioProcessor">
+            <summary>
+            Gets the current audio processor object.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.Plugin.MidiProcessor">
+            <summary>
+            Gets the current midi processor object.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.Plugin.PluginEditor">
+            <summary>
+            Gets the current plugin editor object.
+            </summary>
+        </member>
+        <member name="P:NixMidiTransposer.Plugin.PluginPrograms">
+            <summary>
+            Gets the plugin programs object.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.CreateEditor(Jacobi.Vst.Framework.IVstPluginEditor)">
+            <summary>
+            Creates a default instance and reuses that for all threads.
+            </summary>
+            <param name="instance">A reference to the default instance or null.</param>
+            <returns>Returns the default instance.</returns>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.CreateMidiProcessor(Jacobi.Vst.Framework.IVstMidiProcessor)">
+            <summary>
+            Creates a default instance and reuses that for all threads.
+            </summary>
+            <param name="instance">A reference to the default instance or null.</param>
+            <returns>Returns the default instance.</returns>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.CreatePersistence(Jacobi.Vst.Framework.IVstPluginPersistence)">
+            <summary>
+            Creates a default instance and reuses that for all threads.
+            </summary>
+            <param name="instance">A reference to the default instance or null.</param>
+            <returns>Returns the default instance.</returns>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.CreateMidiSource(Jacobi.Vst.Framework.IVstPluginMidiSource)">
+            <summary>
+            Always returns <b>this</b>.
+            </summary>
+            <param name="instance">A reference to the default instance or null.</param>
+            <returns>Returns the default instance <b>this</b>.</returns>
+        </member>
+        <member name="P:NixMidiTransposer.Plugin.ChannelCount">
+            <summary>
+            Returns the channel count as reported by the host
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.Plugin.CreatePrograms(Jacobi.Vst.Framework.IVstPluginPrograms)">
+            <summary>
+            Implement this when you implement plugin programs or presets.
+            </summary>
+            <param name="instance">A previous instance returned by this method. 
+            When non-null, return a thread-safe version (or wrapper) for the object.</param>
+            <returns>Returns null when not supported by the plugin.</returns>
+        </member>
+        <member name="T:NixMidiTransposer.PluginCommandStub">
+            <summary>
+            The public Plugin Command Stub implementation derived from the framework provided <see cref="T:Jacobi.Vst.Framework.Plugin.StdPluginCommandStub"/>.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.PluginCommandStub.CreatePluginInstance">
+            <summary>
+            Called by the framework to create the plugin root class.
+            </summary>
+            <returns>Never returns null.</returns>
+        </member>
+        <member name="T:NixMidiTransposer.PluginEditor">
+            <summary>
+            Implements the custom UI editor for the plugin.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.PluginEditor.#ctor(NixMidiTransposer.Plugin)">
+            <summary>
+            Constructs a new instance.
+            </summary>
+            <param name="plugin">Must not be null.</param>
+        </member>
+        <member name="T:NixMidiTransposer.PluginPrograms">
+            <summary>
+            This object manages the Plugin programs and its parameters.
+            </summary>
+        </member>
+        <member name="M:NixMidiTransposer.PluginPrograms.#ctor(NixMidiTransposer.Plugin)">
+            <summary>
+            Constructs a new instance.
+            </summary>
+            <param name="plugin">A reference to the plugin root object.</param>
+        </member>
+        <member name="P:NixMidiTransposer.PluginPrograms.ParameterCategories">
+            <summary>
+            Gets a collection of parameter categories.
+            </summary>
+            <remarks>
+            This is the central list that contains all parameter categories.
+            </remarks>
+        </member>
+        <member name="P:NixMidiTransposer.PluginPrograms.ParameterInfos">
+            <summary>
+            Gets a collection of parameter definitions.
+            </summary>
+            <remarks>
+            This is the central list that contains all parameter definitions for the plugin.
+            </remarks>
+        </member>
+        <member name="M:NixMidiTransposer.PluginPrograms.CreateProgramCollection">
+            <summary>
+            Called to initialize the collection of programs for the plugin.
+            </summary>
+            <returns>Never returns null or an empty collection.</returns>
+        </member>
+    </members>
+</doc>
